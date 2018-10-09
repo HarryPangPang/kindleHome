@@ -1,5 +1,5 @@
 <view wx:for="{{booklist}}">
-  <van-card
+  <van-card bindtap="_bookDetail" data-id="{{item._id}}"
   price="{{item.price}}"
   desc="{{item.catalog}}"
   title="{{item.title}}"

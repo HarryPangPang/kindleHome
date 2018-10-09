@@ -32,14 +32,15 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "db guide",
-					"pathName": "pages/databaseGuide/databaseGuide",
+					"name": "scanCode",
+					"pathName": "pages/scanCode/scanCode",
 					"query": ""
 				},
 				{
-					"id": -1,
-					"name": "scanCode",
-					"pathName": "pages/scanCode/scanCode"
+					"id": 1,
+					"name": "bookdetail",
+					"pathName": "pages/bookDetail/bookDetail",
+					"query": "id=W7slX92AWotkZua1"
 				}
 			]
 		}
