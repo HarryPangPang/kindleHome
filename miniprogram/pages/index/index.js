@@ -1,5 +1,6 @@
 const db = wx.cloud.database()
 const books = db.collection('mybooks')
+import Toast from '../../dist/toast/toast';
 Page({
 
   /**
@@ -113,6 +114,17 @@ Page({
       fail:(err)=>{
         console.log(err)
       }
+    })
+  },
+  dontlikethis:()=>{
+    Toast('GOT IT~');
+  },
+  likethis: (item)=>{
+   
+    let currentbookid = item.currentTarget.dataset.id;
+    console.log(currentbookid)
+    wx.navigateTo({
+      url: '../likethis/likethis?id=' + currentbookid
     })
   }
 })

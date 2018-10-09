@@ -1,0 +1,25 @@
+.title_font{
+  font-size: 50rpx;
+  text-align: center;
+  padding-bottom: 5rpx;
+  background-color: #FF9999;
+  color: #fff;
+}
+.conten_scoll{
+  margin-top: 10rpx;
+}
+.recommand_book{
+  font-size: 30rpx;
+  margin: 50rpx;
+}
+.recommand_book_summary{
+  height: 560rpx;
+  overflow: auto;
+}
+.book_img{
+    width: 500rpx;
+    height: 600rpx;
+}
+.book_img_wrap{
+  text-align: center;
+}

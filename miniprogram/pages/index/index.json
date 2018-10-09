@@ -3,8 +3,11 @@
     "van-card": "../../dist/card/index",
     "van-tag": "../../dist/tag/index",
     "van-button": "../../dist/button/index",
-    "van-nav-bar":"../../dist/nav-bar/index",
+    "van-nav-bar": "../../dist/nav-bar/index",
     "van-search": "../../dist/search/index",
-    "van-icon": "../../dist/icon/index"
+    "van-icon": "../../dist/icon/index",
+    "van-row": "../../dist/row/index",
+    "van-col": "../../dist/col/index",
+    "van-toast": "../../dist/toast/index"
   }
 }

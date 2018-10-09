@@ -1,5 +1,5 @@
 .title_font{
-  font-size: 16px;
+  font-size: 50rpx;
   text-align: center;
   padding-bottom: 5rpx;
   background-color: #FF9999;
@@ -7,7 +7,7 @@
 }
 .nav_search_left{
   margin:0 0 0 10rpx;
-  font-size: 20px;
+  font-size: 50rpx;
 }
 .nav_search_right{
   width: 100%;
@@ -34,12 +34,12 @@ text-align: center;
   margin: 50rpx;
 }
 .swiper{
-  height: 1000rpx;
+  height: 1500rpx;
   width: 100%;
-  margin-bottom: 80rpx;
+  /* margin-bottom: 30rpx; */
 }   
 .recommand_book_summary{
-  height: 500rpx;
+  height: 560rpx;
   overflow: auto;
 }
 .book_img{
@@ -48,4 +48,23 @@ text-align: center;
 }
 .book_img_wrap{
   text-align: center;
+}
+.fix_head{
+  position: fixed;
+  top: 0;
+  height: 180rpx;
+  width: 100%;
+  z-index: 1000;
+}
+.conten_scoll{
+  margin-top: 180rpx;
+}
+.fix_foot{
+  display: flex;
+  justify-content: space-between;
+  font-size: 80rpx;
+  margin: 0 150rpx;
+}
+.likethis{
+  color: #FF6666
 }

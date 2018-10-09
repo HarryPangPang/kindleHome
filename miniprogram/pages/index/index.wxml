@@ -1,45 +1,56 @@
-<view class='title_font'>
-  <text>今日份の推荐</text>
-</view>
-<!-- 导航栏 -->
-<view class='nav_search_wrap'>
-  <!-- 菜单图标 -->
-  <view class='nav_search_left'>
-    <van-icon name="wap-nav" />
+<view class='fix_head'>
+  <view class='title_font'>
+    <text>今日份の推荐</text>
   </view>
-  <!-- 搜索框 -->
-  <view class='nav_search_right'>
-    <van-search value="{{ value }}" placeholder="请输入搜索关键词" show-action bind:search="onSearch" bind:cancel="onCancel" />
+  <!-- 导航栏 -->
+  <view class='nav_search_wrap'>
+    <!-- 菜单图标 -->
+    <view class='nav_search_left'>
+      <van-icon name="wap-nav" />
+    </view>
+    <!-- 搜索框 -->
+    <view class='nav_search_right'>
+      <van-search value="{{ value }}" placeholder="请输入搜索关键词" show-action bind:search="onSearch" bind:cancel="onCancel" />
+    </view>
   </view>
-</view>
-
-<!-- 名言 -->
-<view class='loud_word_wrap'>
-  <view class='loud_word_text'>
-    我扑在书上，如同饥饿的铺在面包上
-  </view>
-  <view class='loud_word_maker'>————高尔基</view>
 </view>
 
-<!-- 图书推荐 -->
-<swiper circular="true" class='swiper'>
-  <block wx:for="{{booklist}}">
-    <swiper-item>
-      <!-- 图书图片 -->
-      <view  class='book_img_wrap'>
-        <image src='{{item.image}}'  class='book_img'></image>
-      </view>
-        
-      <!-- 图书简介 -->
-      <view class='recommand_book'>
-        <view>书名：{{item.title}}</view>
-        <view>作者：{{item.author}}</view>
-        <view>简介：
-          <view class='recommand_book_summary'>
-            <text>{{item.summary}}</text>
+<view class='conten_scoll'>
+  <!-- 名言 -->
+  <view class='loud_word_wrap'>
+    <view class='loud_word_text'>
+      我扑在书上，如同饥饿的铺在面包上
+    </view>
+    <view class='loud_word_maker'>————高尔基</view>
+  </view>
+
+  <!-- 图书推荐 -->
+  <swiper circular="true" class='swiper'>
+    <block wx:for="{{booklist}}">
+      <swiper-item>
+        <!-- 图书图片 -->
+        <view class='book_img_wrap'>
+          <image src='{{item.image}}' class='book_img'></image>
+        </view>
+
+        <!-- 图书简介 -->
+        <view class='recommand_book'>
+          <view>书名：{{item.title}}</view>
+          <view>作者：{{item.author}}</view>
+          <view>简介：
+            <view class='recommand_book_summary'>
+              <text>{{item.summary}}</text>
+            </view>
           </view>
         </view>
-      </view>
-    </swiper-item>
-  </block>
-</swiper>
+        <view class='fix_foot'>
+          <van-icon name="close" class='dontlikethis' bind:click="dontlikethis" />
+          <van-icon name="passed" class='likethis' bind:click="likethis" data-id="{{item._id}}" />
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!-- 轻弹窗 -->
+<van-toast id="van-toast" />

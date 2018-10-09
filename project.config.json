@@ -38,9 +38,9 @@
 				},
 				{
 					"id": 1,
-					"name": "bookdetail",
-					"pathName": "pages/bookDetail/bookDetail",
-					"query": "id=W7slX92AWotkZua1"
+					"name": "likethis",
+					"pathName": "pages/likethis/likethis",
+					"query": "id=W7slJ92AWotkZuYZ"
 				}
 			]
 		}

@@ -1,0 +1,24 @@
+<view class='fix_head'>
+  <view class='title_font'>
+    <text>今日份の推荐</text>
+  </view>
+</view>
+
+<view class='conten_scoll'>
+
+  <!-- 图书图片 -->
+  <view class='book_img_wrap'>
+    <image src='{{current_like_book_info.image}}' class='book_img'></image>
+  </view>
+
+  <!-- 图书简介 -->
+  <view class='recommand_book'>
+    <view>书名：{{current_like_book_info.title}}</view>
+    <view>作者：{{current_like_book_info.author}}</view>
+    <view>简介：
+      <view class='recommand_book_summary'>
+        <text>{{current_like_book_info.summary}}</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -3,7 +3,8 @@
   "pages": [
     "pages/index/index",
     "pages/scanCode/scanCode",
-    "pages/bookDetail/bookDetail"
+    "pages/bookDetail/bookDetail",
+    "pages/likethis/likethis"
   ],
   "window": {
     "backgroundColor": " #fff",
