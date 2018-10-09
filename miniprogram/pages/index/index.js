@@ -6,20 +6,42 @@ Page({
    * 页面的初始数据
    */
   data: {
-    booklist:[]
+    booklist:[],
+    userinfo:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    db.collection('mybooks').get().then(res => {
-      // res.data 包含该记录的数据
-      this.setData({
-        booklist:res.data
-      })
-    })
-    
+    let login_clod_fun = new Promise(
+      () => {
+        wx.cloud.callFunction({
+          name: 'login',
+          success: (res) => {
+            // console.log('login done')
+            login_clod_fun.then(
+              wx.getSetting({
+                success: (res) => {
+                  wx.getUserInfo({
+                    success: res => {
+                      this.userinfo = res.userInfo
+                      this.setData({
+                        userinfo_coll: res.userInfo
+                      })
+                    }
+                  })
+                }
+              })
+            )
+          },
+          fail: (err) => {
+            console.log(err)
+          }
+        })
+      }
+    );
+
   },
 
   /**
@@ -33,7 +55,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    db.collection('mybooks').get().then(res => {
+      // res.data 包含该记录的数据
+      this.setData({
+        booklist: res.data
+      })
+    })
   },
 
   /**
@@ -75,6 +102,17 @@ Page({
     // console.log(current_item_id)
     wx.navigateTo({
       url: '../bookDetail/bookDetail?id=' + current_item_id 
+    })
+  },
+  updates:() =>{
+    wx.cloud.callFunction({
+      name: 'batchUpdate',
+      success:(res) => {
+        console.log(res)
+      },
+      fail:(err)=>{
+        console.log(err)
+      }
     })
   }
 })

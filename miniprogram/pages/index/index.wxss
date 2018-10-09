@@ -1,0 +1,51 @@
+.title_font{
+  font-size: 16px;
+  text-align: center;
+  padding-bottom: 5rpx;
+  background-color: #FF9999;
+  color: #fff;
+}
+.nav_search_left{
+  margin:0 0 0 10rpx;
+  font-size: 20px;
+}
+.nav_search_right{
+  width: 100%;
+}
+.nav_search_wrap{
+ background:#f2f2f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.loud_word_wrap{
+font-size: 30rpx;
+text-align: center;
+}
+.loud_word_text{
+  padding-top: 5rpx;
+}
+.loud_word_maker{
+  text-align:right;
+  padding:5rpx 30rpx;
+}
+.recommand_book{
+  font-size: 30rpx;
+  margin: 50rpx;
+}
+.swiper{
+  height: 1000rpx;
+  width: 100%;
+  margin-bottom: 80rpx;
+}   
+.recommand_book_summary{
+  height: 500rpx;
+  overflow: auto;
+}
+.book_img{
+    width: 500rpx;
+    height: 600rpx;
+}
+.book_img_wrap{
+  text-align: center;
+}

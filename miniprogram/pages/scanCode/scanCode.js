@@ -65,19 +65,19 @@ Page({
   },
   scanCode:function(event){
     wx.scanCode({
-      onlyFromCamera: true,
+      // onlyFromCamera: true,
       success: (res)=>{
-        // console.log(res.result)
+        console.log(res.result)
         wx.cloud.callFunction({
           // 云函数名称
           name: 'bookInfo',
           // 传给云函数的参数
           data: {
-            isbn: '9787020108930'
+            // isbn: '9787020108930'
+            isbn: res.result
           },
           success: function (res) {
             var bookStr = JSON.parse(res.result);
-            // console.log(bookStr)
             const db = wx.cloud.database()
             const books = db.collection('mybooks')
             db.collection('mybooks').add({
