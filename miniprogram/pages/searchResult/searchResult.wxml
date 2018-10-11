@@ -16,7 +16,7 @@
   
     <view>书名：{{current_like_book_info.title}}</view>
     <view>作者：{{current_like_book_info.author}}</view>
-    <view>来把她带回家吧~~</view>
+    <view>你寻找的是她吗？</view>
 
     <!-- 一键复制到剪贴板 -->
     <view class='wangpandizhi'>网盘地址：{{current_like_book_info.author}}</view>

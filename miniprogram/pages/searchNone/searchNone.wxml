@@ -1,0 +1,52 @@
+<view class='fix_head'>
+  <view class='title_font'>
+    <text>今日份の推荐</text>
+  </view>
+  <!-- 导航栏 -->
+  <view class='nav_search_wrap'>
+    <!-- 菜单图标 -->
+    <view class='nav_search_left'>
+      <van-icon name="wap-nav" />
+    </view>
+    <!-- 搜索框 -->
+    <view class='nav_search_right'>
+      <van-search value="{{ value }}" placeholder="请输入搜索关键词" show-action bind:search="onSearch" bind:cancel="onCancel" />
+    </view>
+  </view>
+</view>
+<!-- main -->
+<view class='conten_scoll'>
+  <text class='search_none_txt'>
+    sorry,这里好像没有找到你要的书<br />
+    你可以在下面提交你要的书名<br />
+    收录该书后，我会邮件通知你<br />
+    愿所有的等待都值得！<br />
+  </text>
+</view>
+
+<!-- 输入框 -->
+<view class='input_wrap'>
+<van-cell-group>
+  <van-field
+    value="{{ bookname }}"
+    label="书名"
+    placeholder="请输入书名"
+    error="{{false}}"
+  />
+  <van-field
+    value="{{ email }}"
+    label="邮箱"
+    placeholder="请输入邮箱"
+    error-message="{{errormessage_email}}"
+    border="{{ true }}"
+  />
+</van-cell-group>
+</view>
+
+<!-- 提交按钮 -->
+<view class='submit_class'>
+  <van-button type="default" bind:click='submit_wanted'>点击：快去找这本书！</van-button>
+</view>
+
+<van-dialog id="van-dialog" bind:confirm='goback_index'/>
+

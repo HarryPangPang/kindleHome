@@ -8,6 +8,8 @@
     "van-icon": "../../dist/icon/index",
     "van-row": "../../dist/row/index",
     "van-col": "../../dist/col/index",
-    "van-toast": "../../dist/toast/index"
+    "van-toast": "../../dist/toast/index",
+    "van-field": "../../dist/field/index",
+    "van-dialog": "../../dist/dialog/index"
   }
 }

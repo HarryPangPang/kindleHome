@@ -39,8 +39,13 @@ text-align: center;
   /* margin-bottom: 30rpx; */
 }   
 .recommand_book_summary{
-  height: 560rpx;
-  overflow: auto;
+  /* height: 560rpx; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+   word-break: break-all;
+    -webkit-line-clamp: 10;
+    display: -webkit-box;
+    -webkit-box-orient: vertical; 
 }
 .book_img{
     width: 500rpx;
@@ -58,6 +63,7 @@ text-align: center;
 }
 .conten_scoll{
   margin-top: 180rpx;
+  min-width: 100%;
 }
 .fix_foot{
   display: flex;

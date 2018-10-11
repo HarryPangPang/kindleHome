@@ -4,7 +4,9 @@
     "pages/index/index",
     "pages/scanCode/scanCode",
     "pages/bookDetail/bookDetail",
-    "pages/likethis/likethis"
+    "pages/likethis/likethis",
+    "pages/searchResult/searchResult",
+    "pages/searchNone/searchNone"
   ],
   "window": {
     "backgroundColor": " #fff",

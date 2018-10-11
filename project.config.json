@@ -11,6 +11,7 @@
 	"appid": "wx9f26a2f0d4e1c23a",
 	"projectname": "kindle%E5%8A%A0%E6%B2%B9%E7%AB%99",
 	"libVersion": "2.2.5",
+	"compileType": "miniprogram",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -28,7 +29,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -41,6 +42,12 @@
 					"name": "likethis",
 					"pathName": "pages/likethis/likethis",
 					"query": "id=W7slJ92AWotkZuYZ"
+				},
+				{
+					"id": 2,
+					"name": "pages/searchNone/searchNone",
+					"pathName": "pages/searchNone/searchNone",
+					"query": ""
 				}
 			]
 		}

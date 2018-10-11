@@ -15,33 +15,35 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let login_clod_fun = new Promise(
-      () => {
-        wx.cloud.callFunction({
-          name: 'login',
-          success: (res) => {
-            // console.log('login done')
-            login_clod_fun.then(
-              wx.getSetting({
-                success: (res) => {
-                  wx.getUserInfo({
-                    success: res => {
-                      this.userinfo = res.userInfo
-                      this.setData({
-                        userinfo_coll: res.userInfo
-                      })
-                    }
-                  })
-                }
-              })
-            )
-          },
-          fail: (err) => {
-            console.log(err)
-          }
-        })
+    wx.cloud.callFunction({
+      name: 'login',
+      success: (res) => {
+        // console.log(res.result.openid.userInfo)
+          this.setData({
+            user_openid: res.result.openid.userInfo
+          })
+          // wx.getSetting({
+          //   success: (res) => {
+          //     wx.getUserInfo({
+          //       success: (res) => {
+          //         console.log('login done')
+          //         console.log(res)
+          //         // this.userinfo = res.userInfo
+          //         this.setData({
+          //           userinfo_collections: res.userInfo
+          //         })
+          //       },
+          //       fail:err=>{
+          //         console.log(err)
+          //       }
+          //     })
+          //   }
+          // })
+      },
+      fail: (err) => {
+        console.log(err)
       }
-    );
+    })
 
   },
 
@@ -122,7 +124,7 @@ Page({
   likethis: (item)=>{
    
     let currentbookid = item.currentTarget.dataset.id;
-    console.log(currentbookid)
+    console.log(item)
     wx.navigateTo({
       url: '../likethis/likethis?id=' + currentbookid
     })
