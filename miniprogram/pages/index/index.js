@@ -1,5 +1,5 @@
 const db = wx.cloud.database()
-const books = db.collection('mybooks')
+// const mybooks = db.collection('mybooks')
 import Toast from '../../dist/toast/toast';
 Page({
 
@@ -44,7 +44,13 @@ Page({
         console.log(err)
       }
     })
-
+    db.collection('mybooks').get().then(res => {
+      // res.data 包含该记录的数据
+      console.log(res)
+      this.setData({
+        booklist: res.data
+      })
+    })
   },
 
   /**
@@ -58,12 +64,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    db.collection('mybooks').get().then(res => {
-      // res.data 包含该记录的数据
-      this.setData({
-        booklist: res.data
-      })
-    })
+
   },
 
   /**

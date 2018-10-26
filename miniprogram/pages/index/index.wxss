@@ -65,11 +65,17 @@ text-align: center;
   margin-top: 180rpx;
   min-width: 100%;
 }
-.fix_foot{
+.footstyle{
   display: flex;
   justify-content: space-between;
   font-size: 80rpx;
   margin: 0 150rpx;
+
+}
+.fix_foot{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 .likethis{
   color: #FF6666
